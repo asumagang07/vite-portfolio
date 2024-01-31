@@ -1,8 +1,13 @@
-import React from "react";
 import AppComponent from "./apps/AppProvider";
+import { Header, Navigation } from "./components";
 
 const App = () => {
-  return <AppComponent>hgjnhgjgh</AppComponent>;
+  return (
+    <AppComponent>
+      <Header />
+      <Navigation />
+    </AppComponent>
+  );
 };
 
 export default App;
