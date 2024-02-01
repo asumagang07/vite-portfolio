@@ -1,5 +1,13 @@
 import AppComponent from "./apps/AppProvider";
-import { ActivityBar, Header, MainDiv, Navigation } from "./components";
+import {
+  ActivityBar,
+  Footer,
+  Header,
+  MainDiv,
+  Navigation,
+  RouterPage,
+  Sidebar,
+} from "./components";
 
 const App = () => {
   return (
@@ -8,7 +16,10 @@ const App = () => {
       <Navigation />
       <MainDiv>
         <ActivityBar />
+        <Sidebar />
+        <RouterPage></RouterPage>
       </MainDiv>
+      <Footer />
     </AppComponent>
   );
 };
