@@ -1,11 +1,14 @@
 import AppComponent from "./apps/AppProvider";
-import { Header, Navigation } from "./components";
+import { ActivityBar, Header, MainDiv, Navigation } from "./components";
 
 const App = () => {
   return (
     <AppComponent>
       <Header />
       <Navigation />
+      <MainDiv>
+        <ActivityBar />
+      </MainDiv>
     </AppComponent>
   );
 };

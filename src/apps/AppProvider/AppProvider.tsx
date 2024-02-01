@@ -1,7 +1,9 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { ReactNode, createContext, useState } from "react";
 
 interface IProviderProps {
   children?: ReactNode;
+  value?: any;
 }
 
 interface ITabsProps {
@@ -24,8 +26,8 @@ export const AppContext = createContext<IContextProps>({
 });
 
 const AppProvider: React.FC<IProviderProps> = (props) => {
-  const [theme, setTheme] = useState<IContextProps["theme"]>("dark");
-  const [tabs, setTabs] = useState<IContextProps["tabs"]>([]);
+  const [theme, setTheme] = useState<any>("dark");
+  const [tabs, setTabs] = useState<any>([]);
 
   return (
     <AppContext.Provider value={{ theme, setTheme, tabs, setTabs }}>
