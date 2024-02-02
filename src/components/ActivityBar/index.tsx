@@ -47,9 +47,9 @@ const ActivityBar: React.FC = () => {
     <div className={activityBarStyles.rootCls}>
       <div className={activityBarStyles.wrapperCls}>
         <div className={activityBarStyles.divCls}>
-          {data.map((item) => {
+          {data.map((item, index) => {
             return (
-              <div className={activityBarStyles.buttonCls.base}>
+              <div key={index} className={activityBarStyles.buttonCls.base}>
                 {item.icon}
               </div>
             );

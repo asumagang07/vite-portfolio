@@ -3,6 +3,7 @@ import AppComponent from "./apps/AppProvider";
 import {
   Accordion,
   ActivityBar,
+  DraggableTabs,
   Footer,
   Header,
   List,
@@ -87,7 +88,9 @@ const App = () => {
             />
           </Sidebar>
         </ResizableBox>
-        <RouterPage></RouterPage>
+        <RouterPage>
+          <DraggableTabs tab_items={tabs} />
+        </RouterPage>
       </MainDiv>
       <Footer />
     </AppComponent>
