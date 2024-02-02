@@ -9,3 +9,4 @@ export { default as Navigation } from "./Navigation";
 export { default as ResizableBox } from "./ResizableBox";
 export { default as RouterPage } from "./RouterPage";
 export { default as Sidebar } from "./Sidebar";
+export { default as Tabs } from "./Tabs";
