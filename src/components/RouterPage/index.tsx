@@ -7,7 +7,7 @@ interface TRouterPageProps {
 
 const RouterPage: React.FC<TRouterPageProps> = (props) => {
   return (
-    <StyledDiv className="relative rounterPage w-full h-full overflow-y-auto">
+    <StyledDiv className="bg-[#1f1f1f] relative rounterPage w-full h-full overflow-y-auto">
       {props.children}
     </StyledDiv>
   );

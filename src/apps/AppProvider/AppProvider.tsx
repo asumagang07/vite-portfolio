@@ -1,12 +1,14 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { ReactNode, createContext, useState } from "react";
+import { pages_data } from "./data/pages";
 
 interface IProviderProps {
   children?: ReactNode;
   value?: any;
 }
 
-interface ITabsProps {
+export interface ITabsProps {
+  id?: string;
   name?: string;
   icon?: JSX.Element;
 }
@@ -21,7 +23,7 @@ export interface IContextProps {
 export const AppContext = createContext<IContextProps>({
   theme: "light",
   setTheme: () => "light",
-  tabs: [{}],
+  tabs: [...pages_data],
   setTabs: () => [],
 });
 
