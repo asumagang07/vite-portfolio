@@ -11,6 +11,7 @@ export interface ITabsProps {
   id?: string;
   name?: string;
   icon?: JSX.Element;
+  children?: ReactNode;
 }
 
 export interface IContextProps {

@@ -1,25 +1,26 @@
-import { DiJavascript1, DiCss3, DiVisualstudio } from "react-icons/di";
 import { ITabsProps } from "../AppProvider";
+import EmploymentHistory from "../../../pages/EmploymentHistory";
+import About from "../../../pages/About";
 
 export const pages_data: ITabsProps[] = [
   {
     id: "getStarted",
     name: "Get Started",
-    icon: <DiVisualstudio size={20} color={"#007acc"} />,
+    children: <About />,
   },
   {
     id: "about",
     name: "About.css",
-    icon: <DiCss3 size={20} color={"#0066b8"} />,
+    children: "about",
   },
   {
     id: "employment",
-    name: "EmploymentHistory.js",
-    icon: <DiJavascript1 size={20} color="#f2eb00" />,
+    name: "Employment History.js",
+    children: <EmploymentHistory />,
   },
   {
     id: "services",
     name: "Services.js",
-    icon: <DiJavascript1 size={20} color="#f2eb00" />,
+    children: "services",
   },
 ];

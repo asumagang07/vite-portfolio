@@ -9,7 +9,7 @@ const Button: React.FC<TButtonProps> = (props) => {
   const { className, label } = props;
 
   const buttonCls = cn(
-    " flex items-center gap-2 text-sm rounded hover:bg-default-100 cursor-pointer",
+    "flex items-center gap-2 text-sm rounded hover:bg-default-100 cursor-pointer",
     props.className
   );
 

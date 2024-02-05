@@ -1,6 +1,7 @@
 export { default as Accordion } from "./Accordion";
 export { default as ActivityBar } from "./ActivityBar";
 export { default as Button } from "./Button";
+export { default as CodeEditor } from "./CodeEditor";
 export { default as DraggableTabs } from "./DraggableTabs";
 export { default as Footer } from "./Footer";
 export { default as Header } from "./Header";
