@@ -104,3 +104,122 @@ export const someCSSCodeExample = `
     text-decoration: underline;
   }
 `;
+
+export const sampleJs = `
+  // function add() {
+//   let username = document.getElementById("user_name").value;
+//   let firstname = document.getElementById("first_name").value;
+//   let lastname = document.getElementById("last_name").value;
+//   var error = document.getElementById("error");
+
+//   console.log({ username, firstname, lastname }, "hhhhhhhhhh");
+
+//   var new_arr = { username: username, firstname: username, lastname: lastname };
+
+//   Object.entries(new_arr).forEach((entry) => {
+//     if (!username || !firstname || !lastname) {
+//       error.style.display = "flex";
+//       return null;
+//     }
+//     error.style.display = "none";
+//     const [key, value] = entry;
+//     var ul = document.getElementById("new_list");
+//     var li = document.createElement("li");
+//     li.innerHTML = key + ": " + value;
+//     li.setAttribute("id", key);
+//     ul.appendChild(li);
+//   });
+
+//   username.value = " ";
+//   console.log(username, "username empty");
+// }
+
+const btn = document.getElementById("btn");
+const username = document.getElementById("user_name");
+const firstname = document.getElementById("first_name");
+const lastname = document.getElementById("last_name");
+const error = document.getElementById("error");
+const divList = document.getElementById("ul_list");
+
+btn.addEventListener("click", function handleClick(event) {
+  // 👇️ if you are submitting a form (prevents page reload)
+  event.preventDefault();
+
+  // Send value to server
+  const new_arr = {
+    username: username.value,
+    firstname: firstname.value,
+    lastname: lastname.value,
+  };
+
+  const ul_list = iterate(new_arr);
+
+  divList.appendChild(ul_list);
+
+  // 👇️ clear input field
+  username.value = "";
+  firstname.value = "";
+  lastname.value = "";
+});
+
+function iterate(new_arr) {
+  var ul = document.createElement("ul");
+  Object.entries(new_arr).forEach((entry) => {
+    if (!username.value || !firstname.value || !lastname.value) {
+      error.style.display = "flex";
+      return null;
+    }
+    error.style.display = "none";
+    const [key, value] = entry;
+    var li = document.createElement("li");
+    li.innerHTML = key + ": " + value;
+    li.setAttribute("id", key);
+    ul.appendChild(li);
+  });
+  return ul;
+}
+
+`;
+
+export const sampleHtml = `
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <style>
+    .error {
+      color: red;
+      display: none;
+    }
+  </style>
+  <body>
+    <h2>X State Practice</h2>
+    <p id="demo">A Paragraph.</p>
+    <div class="">
+      <input type="text" id="user_name" placeholder="Username" />
+      <input type="text" id="first_name" placeholder="First Name" />
+      <input type="text" id="last_name" placeholder="Last Name" />
+      <button id="btn" type="submit" onclick="add()">Add</button>
+    </div>
+    <div class="error" id="error">Error...</div>
+    <div class="ul_list" id="ul_list">
+      <ul>
+        <li>Ivy</li>
+        <li>Quillosa</li>
+        <li>iquillosa</li>
+      </ul>
+      <ul>
+        <li>Adrian</li>
+        <li>Sumagang</li>
+        <li>asumagang</li>
+      </ul>
+      <ul id="new_list"></ul>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
+
+
+`;

@@ -1,6 +1,5 @@
 import { ITabsProps } from "../AppProvider";
-import EmploymentHistory from "../../../pages/EmploymentHistory";
-import About from "../../../pages/About";
+import { About, EmploymentHistory, Projects, Services } from "../../../pages";
 
 export const pages_data: ITabsProps[] = [
   {
@@ -11,7 +10,7 @@ export const pages_data: ITabsProps[] = [
   {
     id: "about",
     name: "About.css",
-    children: "about",
+    children: <Projects />,
   },
   {
     id: "employment",
@@ -21,6 +20,6 @@ export const pages_data: ITabsProps[] = [
   {
     id: "services",
     name: "Services.js",
-    children: "services",
+    children: <Services />,
   },
 ];

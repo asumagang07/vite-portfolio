@@ -61,7 +61,7 @@ const DraggableTabs: React.FC<TDraggableTabProps> = (props) => {
               {...provided.droppableProps}
               ref={provided.innerRef}
             >
-              {tabItems?.map(({ id, name, icon }, index) => {
+              {tabItems?.map(({ id, name }, index) => {
                 return (
                   <Draggable key={id} draggableId={id ?? ""} index={index}>
                     {(provided, snapshot) => (

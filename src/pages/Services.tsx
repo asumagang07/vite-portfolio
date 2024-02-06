@@ -1,19 +1,19 @@
 import React from "react";
 import { CodeEditor } from "../components";
-import { emp_data } from "../apps/AppProvider/data/EmploymentHistoryData";
+import { sampleJs } from "../apps/AppProvider/data/EmploymentHistoryData";
 
-const EmploymentHistory: React.FC = () => {
+const Services: React.FC = () => {
   return (
     <div className="flex w-full">
       <CodeEditor
         height="84vh"
         width={"100%"}
-        path={"./pages.tsx"}
+        path={"./pages.js"}
         defaultLanguage={"javascript"}
-        defaultValue={emp_data}
+        defaultValue={sampleJs}
       />
     </div>
   );
 };
 
-export default EmploymentHistory;
+export default Services;
