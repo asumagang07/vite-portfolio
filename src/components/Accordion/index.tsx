@@ -51,7 +51,9 @@ const Accordion: React.FC<TAccordionProps> = (props) => {
                   )}
                 >
                   <RAccordion.AccordionItemButton className="w-full h-full flex gap-2 items-center justify-start  ">
-                    <BiSolidChevronDown />
+                    <BiSolidChevronDown
+                      style={{ minWidth: 20, minHeight: 20 }}
+                    />
                     <div className="flex items-center gap-2">
                       {item?.itemIcon}
                       <p className="text-sm font-medium">{item.heading}</p>
@@ -65,7 +67,9 @@ const Accordion: React.FC<TAccordionProps> = (props) => {
                   )}
                 >
                   <RAccordion.AccordionItemButton className="w-full h-full flex gap-2 items-center justify-start ">
-                    <BiSolidChevronRight />
+                    <BiSolidChevronRight
+                      style={{ minWidth: 20, minHeight: 20 }}
+                    />
                     <div className="flex items-center gap-2">
                       {item?.itemIcon}
                       <p className="text-sm font-medium">{item.heading}</p>

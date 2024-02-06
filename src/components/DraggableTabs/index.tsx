@@ -85,7 +85,7 @@ const DraggableTabs: React.FC<TDraggableTabProps> = (props) => {
                             setactiveTab(id ?? "");
                         }}
                       >
-                        {icon && getIcon(name)}
+                        {getIcon(name)}
                         {name}
                         {closable && (
                           <button

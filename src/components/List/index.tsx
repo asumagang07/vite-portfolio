@@ -13,10 +13,11 @@ const List: React.FC<TListProps> = (props) => {
         return (
           <div
             key={item.id}
-            className="flex gap-2 py-1 px-8 hover:bg-default-200 items-center text-sm"
+            className="flex gap-2 py-1 px-8 hover:bg-default-200 items-center text-sm  "
             onClick={() => console.log("selected", item.name)}
           >
-            {getIcon(item.name)} {item.name}
+            {getIcon(item.name)}
+            <p className="whitespace-nowrap truncate">{item.name}</p>
           </div>
         );
       })}
