@@ -4,6 +4,7 @@ import { getIcon } from "../../hooks";
 
 interface TListProps {
   items?: ITabsProps[];
+  active?: string;
 }
 
 const List: React.FC<TListProps> = (props) => {

@@ -9,6 +9,7 @@ import {
   VscExtensions,
 } from "react-icons/vsc";
 import { ThemeContext } from "../../apps/AppProvider/ThemeProvider";
+import { AppContext } from "../../apps/AppProvider/AppProvider";
 
 const data = [
   {
@@ -43,13 +44,28 @@ const ActivityBar: React.FC = () => {
     theme: { activityBarStyles },
   } = useContext(ThemeContext);
 
+  const { sidebar_collapse, setSidebarCollapse } = useContext(AppContext);
+
+  const handleClick = (id?: string) => {
+    if (id === "1") {
+      setSidebarCollapse(!sidebar_collapse);
+      console.log(sidebar_collapse, "list-----");
+      return;
+    }
+    return;
+  };
+
   return (
     <div className={activityBarStyles.rootCls}>
       <div className={activityBarStyles.wrapperCls}>
         <div className={activityBarStyles.divCls}>
           {data.map((item, index) => {
             return (
-              <div key={index} className={activityBarStyles.buttonCls.base}>
+              <div
+                key={index}
+                className={activityBarStyles.buttonCls.base}
+                onClick={() => handleClick(item.id)}
+              >
                 {item.icon}
               </div>
             );

@@ -20,6 +20,7 @@ const ResizableBox: React.FC<IResizableBoxProps> = (props) => {
       width: "auto",
       height: "auto",
     },
+    size,
     handle = {
       top: false,
       right: true,
@@ -39,6 +40,7 @@ const ResizableBox: React.FC<IResizableBoxProps> = (props) => {
       minWidth={minWidth}
       minHeight={minHeight}
       maxWidth={maxWidth}
+      size={size}
       handleClasses={{
         right: `flex justify-center after:content-[''] after:absolute after:top-0 after:right-0 after:block after:w-2 after:h-full  after:hover:bg-blue-500 after:active:bg-blue-500`,
       }}
